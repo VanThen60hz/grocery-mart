@@ -10,7 +10,7 @@
         margin-left: 39px;
     }
 
-    @include abstracts.breakpoint(sm) {
+    @include abstracts.breakpoint(md) {
         margin-left: 0;
     }
 
@@ -18,7 +18,7 @@
         font-size: 2.2rem;
         font-style: normal;
         font-weight: 700;
-        line-height: 145.455%;
+        line-height: 1.45;
 
         @include abstracts.breakpoint(lg) {
             font-size: 1.8rem;
