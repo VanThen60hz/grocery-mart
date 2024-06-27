@@ -1,4 +1,5 @@
 @use "../abstracts";
+
 .dropdown {
     position: absolute;
     left: 0;
@@ -13,7 +14,7 @@
     transition: opacity, visibility, max-height;
     transition-duration: 0.9s;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         position: absolute;
 
         padding-top: 0;
@@ -42,7 +43,7 @@
             filter: var(--dropdown-arrow-color);
         }
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             padding: 0 40px;
             border-radius: 0;
 
@@ -55,7 +56,7 @@
             }
         }
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(sm) {
             padding: 0 20px;
         }
     }
@@ -70,7 +71,7 @@
         width: var(--main-column-width);
         border-right: 1px solid var(--top-menu-border-color);
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             width: 100%;
             border-right: none;
         }
@@ -85,7 +86,7 @@
     display: flex;
     gap: 14px;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         margin-top: 10px;
     }
 
@@ -97,11 +98,11 @@
         width: 36px;
         height: 36px;
 
-        @include abstracts.breakpoint(xl) {
+        @include abstracts.screen(xl) {
             display: none;
         }
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             display: block;
         }
     }
@@ -137,7 +138,7 @@
         font-weight: 500;
         line-height: 1.5;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             margin-bottom: 26px;
         }
     }
@@ -154,7 +155,7 @@
 
         overflow-y: auto;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             margin-top: 0;
             max-height: none;
         }
@@ -206,7 +207,7 @@
     transition: opacity, visibility, max-height;
     transition-duration: 1.5s;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         position: initial;
         grid-template-columns: 1fr;
 
@@ -229,7 +230,7 @@
         opacity: 1;
         visibility: visible;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             max-height: 0;
             opacity: 1;
             visibility: visible;
