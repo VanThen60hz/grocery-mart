@@ -126,16 +126,30 @@
 
     &__item {
         &:hover > .dropdown {
-            z-index: 2;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &:hover .sub-menu--not-main {
+            max-height: calc(
+                min(582px, 100vh - 158px) - (var(--inner-padding))
+            );
 
             opacity: 1;
             visibility: visible;
         }
 
+        &:hover .menu-column__list {
+            max-height: calc(
+                min(582px, 100vh - 158px) -
+                    (var(--inner-padding) * 2 + var(--list-margin-top))
+            );
+        }
+
         @include abstracts.screen(lg) {
             width: 100%;
 
-            &:hover > .dropdown {
+            &:hover .dropdown {
                 max-height: 0;
                 opacity: 0;
                 visibility: hidden;
