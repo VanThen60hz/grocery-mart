@@ -36,9 +36,16 @@ button,
 input,
 textarea,
 select {
-    font-family: inherit;
+    padding: 0;
+    border: none;
     color: inherit;
+    outline: none;
+    font-family: inherit;
     -webkit-tap-highlight-color: transparent;
+}
+
+input {
+    background: transparent;
 }
 
 ::-webkit-scrollbar {

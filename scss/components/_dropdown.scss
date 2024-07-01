@@ -147,24 +147,14 @@
         --list-margin-top: 19px;
 
         max-height: 0;
-
         margin-top: var(--list-margin-top);
-
         overflow-y: auto;
+
+        transition: max-height 0.9s;
 
         @include abstracts.screen(lg) {
             margin-top: 0;
             max-height: none;
-        }
-    }
-
-    &__item {
-        &--active .sub-menu {
-            display: grid;
-            max-height: 99999px;
-
-            opacity: 1;
-            visibility: visible;
         }
     }
 
@@ -184,7 +174,7 @@
         font-size: 1.4rem;
         line-height: 1.43;
 
-        transition: 0.5s ease;
+        transition: 0.9s ease;
     }
 }
 
@@ -192,9 +182,11 @@
     position: absolute;
     inset: 0 0 0 var(--main-column-width);
 
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 
+    max-height: 0;
     padding-left: var(--inner-padding);
 
     overflow-y: auto;

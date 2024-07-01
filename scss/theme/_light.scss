@@ -2,8 +2,8 @@
 
 html {
     --text-color: #1a162e;
-    --icon-color: brightness(0) saturate(100%) invert(8%) sepia(6%)
-        saturate(6364%) hue-rotate(212deg) brightness(95%) contrast(96%);
+    --icon-color: brightness(0) saturate(100%) invert(8%) sepia(6%) saturate(6364%) hue-rotate(212deg) brightness(95%)
+        contrast(96%);
     --body-bg: #f6f6f6;
     --header-bg-color: #eee;
     --top-act-group-bg-color: #fff;
@@ -43,4 +43,17 @@ html {
     // Product card
     --product-card-bg: #fff;
     --product-card-shadow: rgba(237, 237, 246, 0.2);
+
+    // Filter
+    --filter-separate-bg: #eee;
+
+    // Filter form
+    --filter-form-bg: #fff;
+    --filter-form-shadow: rgba(200, 200, 200, 0.4);
+    --filter-form-slider-bg: #d2d1d6;
+    --filter-form-slider-before-after-border: #ffb700;
+    --filter-form-input-and-select-wrap-border: #d2d1d6;
+    --filter-form-input-placeholder: #9e9da8;
+    --filter-form-tag-color: #9e9da8;
+    --filter-form-tag-bg: #f8f8fb;
 }

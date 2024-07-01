@@ -5,12 +5,6 @@
     align-items: center;
 }
 
-%visibleDropdown {
-    max-height: 99999px !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
 .header {
     background: var(--header-bg-color);
 
@@ -131,19 +125,19 @@
         }
 
         &:hover .sub-menu--not-main {
-            max-height: calc(
-                min(582px, 100vh - 158px) - (var(--inner-padding))
-            );
-
+            max-height: calc(min(582px, 100vh - 158px) - (var(--inner-padding)));
             opacity: 1;
             visibility: visible;
         }
 
         &:hover .menu-column__list {
-            max-height: calc(
-                min(582px, 100vh - 158px) -
-                    (var(--inner-padding) * 2 + var(--list-margin-top))
-            );
+            max-height: calc(min(582px, 100vh - 158px) - (var(--inner-padding) * 2 + var(--list-margin-top)));
+        }
+
+        &:hover .menu-column__item--active .sub-menu {
+            max-height: 9999px;
+            opacity: 1;
+            visibility: visible;
         }
 
         @include abstracts.screen(lg) {
