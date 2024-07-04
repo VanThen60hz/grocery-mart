@@ -2717,13 +2717,26 @@ html.dark {
   background: #ffb700;
 }
 .form__checkbox:has(:checked)::after {
-  top: 5px;
+  top: 4px;
   left: 2px;
   width: 15px;
   height: 8px;
   border: 2px solid;
   border-color: transparent transparent #fff #fff;
   rotate: -45deg;
+}
+
+.message {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: left;
+}
+.message--success {
+  border: 1px solid #5bc45f;
+  background: rgba(39, 243, 117, 0.2);
 }
 
 .home__container {
@@ -2794,7 +2807,7 @@ html.dark {
   translate: -50%;
 }
 .auth__intro-img {
-  max-width: 100%;
+  width: min(424px, 100%);
 }
 .auth__intro-text {
   max-width: 412px;
@@ -2866,6 +2879,9 @@ html.dark {
     font-size: 1.4rem;
   }
 }
+.auth__message {
+  margin-top: 30px;
+}
 .auth__form {
   width: 100%;
   margin-top: 30px;
@@ -2874,6 +2890,9 @@ html.dark {
   .auth__form {
     margin-top: 0;
   }
+}
+.auth__form-forgot {
+  margin-top: 10px;
 }
 .auth__link {
   color: #0071dc;
@@ -2916,6 +2935,9 @@ html.dark {
 }
 .auth__text-link {
   font-size: inherit;
+}
+.auth__text-forgot {
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */
