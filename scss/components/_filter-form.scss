@@ -51,21 +51,6 @@
     &__form {
         margin-top: 30px;
 
-        &-label {
-            display: block;
-
-            font-size: 2.2rem;
-            font-weight: 500;
-            line-height: 1.46;
-
-            &--small {
-                margin-bottom: 10px;
-
-                font-size: 1.4rem;
-                line-height: 1.43;
-            }
-        }
-
         &-group {
             margin-top: 20px;
 
@@ -80,6 +65,7 @@
         &-slider {
             position: relative;
 
+            margin: 30px 0;
             width: 100%;
             height: 2px;
 
@@ -110,10 +96,9 @@
             }
         }
 
-        &-text-input,
-        &-select-wrap {
+        &-text-input {
             border-radius: 6px;
-            border: 1px solid var(--filter-form-input-and-select-wrap-border);
+            border: 1px solid var(--filter-form-text-input-border);
         }
 
         &-text-input {
@@ -127,6 +112,7 @@
             overflow: hidden;
 
             &--small {
+                margin-top: 10px;
                 width: 121px;
                 height: 36px;
                 padding: 0 12px;
@@ -167,65 +153,6 @@
                 font-size: 1.6rem !important;
             }
         }
-
-        &-select-wrap {
-            display: flex;
-            align-items: center;
-
-            height: 45px;
-        }
-
-        &-select {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            min-width: var(--width, 108px);
-            height: calc(100% - 10px);
-            padding: 0 14px;
-
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 1.43;
-
-            @include abstracts.screen(xl) {
-                flex: 1;
-            }
-        }
-
-        &-select + &-select {
-            border-left: 1px solid var(--filter-form-input-and-select-wrap-border);
-        }
-
-        &-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px 20px;
-
-            @include abstracts.screen(sm) {
-                gap: 10px;
-            }
-        }
-
-        &-tag {
-            padding: 6px 12px;
-            border-radius: 6px;
-
-            color: var(--filter-form-tag-color);
-            background: var(--filter-form-tag-bg);
-
-            color: var(--Secondary-Color-Secondary-2, #9e9da8);
-
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 1.43;
-
-            transition: color 0.2s;
-
-            &:hover {
-                color: var(--text-color);
-            }
-        }
     }
     // End form
 
@@ -233,7 +160,7 @@
         display: flex;
     }
 
-    &-separate {
+    &__separate {
         width: 1px;
         margin: 0 30px;
 
