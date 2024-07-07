@@ -15,6 +15,13 @@ html.dark {
         --header-shadow-color: rgba(0, 0, 0, 0.2);
     }
 
+    // Header
+    --header-act-dropdown-bg: #2f3441;
+    --header-act-dropdown-shadow: rgba(23, 28, 40, 0.4);
+    --header-act-dropdown-border-color: #171c28;
+    --header-act-dropdown-arrow: brightness(0) saturate(100%) invert(17%) sepia(8%) saturate(1411%) hue-rotate(186deg) brightness(96%)
+        contrast(90%);
+
     // Dropdown
     --dropdown-bg-color: #575c6a;
     --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
