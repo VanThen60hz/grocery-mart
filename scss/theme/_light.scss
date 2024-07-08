@@ -107,4 +107,18 @@ html {
 
     // Text content
     --text-content-hr-bg: #ebebeb;
+
+    // Checkout
+    --checkout-breadcrumbs-bg: #fff;
+    --cart-info-bg: #fff;
+    --cart-info-shadow: rgba(237, 237, 246, 0.2);
+    --cart-info-separate: #d2d1d6;
+    --cart-item-border: #d2d1d6;
+    --cart-item-price-wrap: #9e9da8;
+    --cart-item-status: #67b044;
+    --cart-item-control-btn: #9e9da8;
+
+    // Gift item
+    --gift-item-bg: rgba(118, 68, 225, 0.1);
+    --gift-item-shadow: rgba(237, 237, 246, 0.2);
 }

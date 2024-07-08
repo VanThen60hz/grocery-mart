@@ -93,4 +93,21 @@ html.dark {
 
     // Text content
     --text-content-hr-bg: #717681;
+
+    // Checkout
+    --checkout-breadcrumbs-bg: #171c28;
+    --cart-info-bg: #171c28;
+    --cart-info-text-color: #b9babe;
+    --cart-info-shadow: rgba(23, 28, 40, 0.2);
+    --cart-info-separate: #292e39;
+    --cart-item-border: #292e39;
+    --cart-item-input-border: #9e9da8;
+    --cart-item-price-wrap: #9e9da8;
+    --cart-item-status: #67b044;
+    --cart-item-control-btn: #9e9da8;
+    --cart-info-sub-label-color: #9e9da8;
+
+    // Gift item
+    --gift-item-bg: rgba(118, 68, 225, 0.1);
+    --gift-item-shadow: none;
 }
