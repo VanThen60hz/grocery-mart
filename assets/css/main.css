@@ -1424,6 +1424,8 @@ html {
   --cart-item-control-btn: #9e9da8;
   --gift-item-bg: rgba(118, 68, 225, 0.1);
   --gift-item-shadow: rgba(237, 237, 246, 0.2);
+  --dialog-bg: #fff;
+  --dialog-shadow: rgba(44, 43, 43, 0.2);
 }
 @media (max-width: 991.98px) {
   html {
@@ -1522,6 +1524,8 @@ html.dark {
   --cart-info-sub-label-color: #9e9da8;
   --gift-item-bg: rgba(118, 68, 225, 0.1);
   --gift-item-shadow: none;
+  --dialog-bg: #575c6a;
+  --dialog-shadow: rgba(23, 28, 40, 0.4);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -2506,13 +2510,17 @@ html.dark {
   background: #f8f8f8;
   font-size: 1.8rem;
   font-weight: 500;
+  white-space: nowrap;
   user-select: none;
+}
+.btn--small {
+  height: 40px;
+  padding: 0 16px;
 }
 .btn + .btn:not(.btn--no-margin) {
   margin-left: 20px;
 }
 .btn--text {
-  color: #9e9da8;
   background: transparent;
   font-size: 1.5rem;
   font-weight: 400;
@@ -3172,6 +3180,60 @@ html.dark {
   height: 1px;
   margin: 40px 0;
   background: var(--text-content-hr-bg);
+}
+
+.dialog__overlay, .dialog {
+  position: fixed;
+  inset: 0;
+}
+
+.dialog {
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity, visibility;
+  transition-duration: 0.3s;
+}
+.dialog.show {
+  opacity: 1;
+  visibility: visible;
+}
+.dialog__overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+.dialog__content {
+  position: relative;
+  z-index: 1;
+  width: min(450px, 100% - 40px);
+  padding: 30px;
+  background: var(--dialog-bg);
+  border-radius: 20px;
+  box-shadow: 0px 20px 60px 10px var(--dialog-shadow);
+}
+.dialog__text {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+.dialog__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+@media (max-width: 991.98px) {
+  .dialog {
+    gap: 20px;
+    padding: 20px;
+  }
+  .dialog__btn {
+    flex-grow: 1;
+    border-radius: 12px;
+  }
 }
 
 .home {
