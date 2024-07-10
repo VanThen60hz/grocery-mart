@@ -33,6 +33,20 @@
         padding: 16px;
     }
 
+    &__heading {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.42;
+    }
+
+    &__sub-heading {
+        margin: 30px 0;
+
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.45;
+    }
+
     &__list {
         margin-top: -30px;
 
@@ -192,7 +206,7 @@
         color: var(--cart-item-status);
     }
 
-    &__control {
+    &__ctrl {
         display: flex;
         align-items: center;
         gap: 20px;
@@ -222,6 +236,10 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 1.47;
+
+        &-btn {
+            display: flex;
+        }
     }
 
     &__total-price {
@@ -238,12 +256,12 @@
         }
     }
 
-    &__control-btn {
+    &__ctrl-btn {
         display: flex;
         align-items: center;
         gap: 10px;
 
-        color: var(--cart-item-control-btn);
+        color: var(--cart-item-ctrl-btn);
 
         font-size: 1.6rem;
         font-weight: 500;
@@ -286,5 +304,136 @@
         font-size: 1.2rem;
         font-weight: 400;
         line-height: 1.43;
+    }
+}
+
+.user-address {
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__btn {
+        @include abstracts.screen(md) {
+            height: 46px;
+        }
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.45;
+    }
+
+    &__desc {
+        margin-top: 3px;
+
+        font-size: 1.5rem;
+        line-height: 1.47;
+    }
+
+    &__message {
+        margin-top: 30px;
+        font-weight: 500;
+    }
+
+    &__link {
+        margin-left: 5px;
+        color: #0071dc;
+    }
+}
+
+.address-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+
+    margin-top: 30px;
+
+    @include abstracts.screen(md) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__left {
+        display: flex;
+
+        gap: 16px;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.45;
+    }
+
+    &__desc {
+        width: min(570px, 95%);
+        margin-top: 3px;
+
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.47;
+    }
+
+    &__list {
+        display: flex;
+        gap: 30px;
+
+        margin-top: 20px;
+
+        list-style: disc inside;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+        }
+
+        &-item {
+            margin-left: 8px;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__ctrl {
+        margin-top: auto;
+
+        &-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 1.45;
+        }
+    }
+
+    &__checkbox {
+        &-input {
+            appearance: none;
+
+            &::before {
+                content: url(../../assets/icons/checkbox-uncheck.svg);
+            }
+
+            &:not(:checked)::before {
+                filter: var(--icon-color);
+            }
+
+            &:checked::before {
+                content: url(../../assets/icons/checkbox-checked.svg);
+            }
+        }
     }
 }
