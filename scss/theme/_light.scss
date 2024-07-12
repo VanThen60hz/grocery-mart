@@ -2,7 +2,8 @@
 
 html {
     --text-color: #1a162e;
-    --icon-color: brightness(0) saturate(100%) invert(8%) sepia(6%) saturate(6364%) hue-rotate(212deg) brightness(95%) contrast(96%);
+    --icon-color: brightness(0) saturate(100%) invert(8%) sepia(6%) saturate(6364%) hue-rotate(212deg) brightness(95%)
+        contrast(96%);
     --body-bg: #f6f6f6;
     --header-bg-color: #eee;
     --footer-bg-color: var(--header-bg-color);
@@ -122,7 +123,7 @@ html {
     --gift-item-bg: rgba(118, 68, 225, 0.1);
     --gift-item-shadow: rgba(237, 237, 246, 0.2);
 
-    // Dialog
-    --dialog-bg: #fff;
-    --dialog-shadow: rgba(44, 43, 43, 0.2);
+    // Modal
+    --modal-bg: #fff;
+    --modal-shadow: rgba(44, 43, 43, 0.2);
 }

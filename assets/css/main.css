@@ -1363,7 +1363,8 @@ strong {
 }
 html {
   --text-color: #1a162e;
-  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(6%) saturate(6364%) hue-rotate(212deg) brightness(95%) contrast(96%);
+  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(6%) saturate(6364%) hue-rotate(212deg) brightness(95%)
+      contrast(96%);
   --body-bg: #f6f6f6;
   --header-bg-color: #eee;
   --footer-bg-color: var(--header-bg-color);
@@ -1420,8 +1421,8 @@ html {
   --cart-item-ctrl-btn: #9e9da8;
   --gift-item-bg: rgba(118, 68, 225, 0.1);
   --gift-item-shadow: rgba(237, 237, 246, 0.2);
-  --dialog-bg: #fff;
-  --dialog-shadow: rgba(44, 43, 43, 0.2);
+  --modal-bg: #fff;
+  --modal-shadow: rgba(44, 43, 43, 0.2);
 }
 @media (max-width: 991.98px) {
   html {
@@ -1458,7 +1459,8 @@ html {
 
 html.dark {
   --text-color: #fff;
-  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(278deg) brightness(101%) contrast(104%);
+  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(278deg) brightness(101%)
+      contrast(104%);
   --body-bg: #292e39;
   --header-bg-color: #171c28;
   --footer-bg-color: var(--header-bg-color);
@@ -1469,15 +1471,15 @@ html.dark {
   --header-act-dropdown-bg: #2f3441;
   --header-act-dropdown-shadow: rgba(23, 28, 40, 0.4);
   --header-act-dropdown-border-color: #171c28;
-  --header-act-dropdown-arrow: brightness(0) saturate(100%) invert(17%) sepia(8%) saturate(1411%) hue-rotate(186deg) brightness(96%)
-      contrast(90%);
+  --header-act-dropdown-arrow: brightness(0) saturate(100%) invert(17%) sepia(8%) saturate(1411%) hue-rotate(186deg)
+      brightness(96%) contrast(90%);
   --dropdown-bg-color: #575c6a;
   --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
-  --dropdown-arrow-color: brightness(0) saturate(100%) invert(38%) sepia(2%) saturate(3382%) hue-rotate(189deg) brightness(92%)
-      contrast(91%);
+  --dropdown-arrow-color: brightness(0) saturate(100%) invert(38%) sepia(2%) saturate(3382%) hue-rotate(189deg)
+      brightness(92%) contrast(91%);
   --top-menu-border-color: #171c28;
-  --menu-column-icon-color: brightness(0) saturate(100%) invert(100%) sepia(20%) saturate(3376%) hue-rotate(179deg) brightness(106%)
-      contrast(95%);
+  --menu-column-icon-color: brightness(0) saturate(100%) invert(100%) sepia(20%) saturate(3376%) hue-rotate(179deg)
+      brightness(106%) contrast(95%);
   --sidebar-bg: #292e39;
   --sidebar-shadow: rgba(23, 28, 40, 0.4);
   --cate-item-bg: #171c28;
@@ -1520,8 +1522,8 @@ html.dark {
   --cart-info-sub-label-color: #9e9da8;
   --gift-item-bg: rgba(118, 68, 225, 0.1);
   --gift-item-shadow: none;
-  --dialog-bg: #575c6a;
-  --dialog-shadow: rgba(23, 28, 40, 0.4);
+  --modal-bg: #575c6a;
+  --modal-shadow: rgba(23, 28, 40, 0.4);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -2781,6 +2783,14 @@ html.dark {
   opacity: 0.5;
   pointer-events: none;
 }
+.form__row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.form__row > * {
+  flex: 1;
+}
 .form__group {
   margin-top: 30px;
 }
@@ -2804,23 +2814,37 @@ html.dark {
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon {
   display: none;
 }
-.form__text-input {
+.form__text-area, .form__text-input {
   display: flex;
   align-items: center;
-  height: 50px;
-  padding: 12px;
+  padding: 0 12px;
   border-radius: 10px;
   border: 1.5px solid #d2d1d6;
 }
-@media (max-width: 767.98px) {
-  .form__text-input {
-    height: 48px;
-  }
+.form__text-area--small, .form__text-input--small {
+  border-radius: 8px;
+}
+.form__text-area:focus-within, .form__text-input:focus-within {
+  border-color: #77dae6;
+}
+.form__text-area {
+  height: 100px;
+  padding: 12px;
+}
+.form__text-area-input {
+  width: 100%;
+  resize: none;
+}
+.form__text-input {
+  height: 50px;
+}
+.form__text-input--small {
+  height: 42px;
 }
 .form__text-input:focus-within {
   border-color: #77dae6;
 }
-.form__input {
+.form__input, .form__text-area-input {
   flex: 1;
   height: 100%;
   font-size: 1.8rem;
@@ -2828,11 +2852,11 @@ html.dark {
   line-height: 1.45;
 }
 @media (max-width: 767.98px) {
-  .form__input {
+  .form__input, .form__text-area-input {
     font-size: 1.6rem;
   }
 }
-.form__input::placeholder {
+.form__input::placeholder, .form__text-area-input::placeholder {
   color: var(--form-placeholder-color);
 }
 .form__input-icon {
@@ -3177,12 +3201,12 @@ html.dark {
   background: var(--text-content-hr-bg);
 }
 
-.dialog__overlay, .dialog {
+.modal__overlay, .modal {
   position: fixed;
   inset: 0;
 }
 
-.dialog {
+.modal {
   z-index: 99;
   display: flex;
   align-items: center;
@@ -3192,27 +3216,60 @@ html.dark {
   transition: opacity, visibility;
   transition-duration: 0.3s;
 }
-.dialog.show {
+.modal.show {
   opacity: 1;
   visibility: visible;
 }
-.dialog__overlay {
+.modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  font-size: 3.5rem;
+  padding: 3px 20px;
+  opacity: 0.7;
+}
+.modal__close:hover {
+  opacity: 1;
+}
+.modal__overlay {
   background: rgba(0, 0, 0, 0.6);
 }
-.dialog__content {
+.modal__heading {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.42;
+}
+.modal__body {
+  max-height: calc(100vh - 200px);
+  padding-right: 20px;
+  overflow-y: auto;
+}
+.modal__content {
   position: relative;
   z-index: 1;
-  width: min(450px, 100% - 40px);
+  width: min(var(--content-width, 800px), 100% - 40px);
   padding: 30px;
-  background: var(--dialog-bg);
+  background: var(--modal-bg);
   border-radius: 20px;
-  box-shadow: 0px 20px 60px 10px var(--dialog-shadow);
+  box-shadow: 0px 20px 60px 10px var(--modal-shadow);
 }
-.dialog__text {
+.modal--small .modal__content {
+  --content-width: 400px;
+}
+.modal--large .modal__content {
+  --content-width: 1100px;
+}
+.modal--fill .modal__content {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+.modal__text {
   font-size: 1.8rem;
   line-height: 1.5;
 }
-.dialog__bottom {
+.modal__bottom {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -3221,11 +3278,11 @@ html.dark {
   margin-top: 30px;
 }
 @media (max-width: 991.98px) {
-  .dialog {
+  .modal {
     gap: 20px;
     padding: 20px;
   }
-  .dialog__btn {
+  .modal__btn {
     flex-grow: 1;
     border-radius: 12px;
   }
