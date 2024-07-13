@@ -64,6 +64,9 @@ html.dark {
 
     // Forms
     --form-placeholder-color: #b9babe;
+    --form-select-dialog-shadow: rgba($color: #fff, $alpha: 0.15);
+    --form-select-dialog-bg: var(--dropdown-bg-color);
+    --form-option-bg: #292e39;
 
     // Product detail
     --product-info-container-bg: #171c28;

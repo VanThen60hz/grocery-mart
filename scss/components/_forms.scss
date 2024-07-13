@@ -13,6 +13,16 @@ $error-color: #ed4337;
         align-items: center;
         gap: 30px;
 
+        @include abstracts.screen(md) {
+            gap: 20px;
+        }
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            align-items: initial;
+            gap: 0;
+        }
+
         > * {
             flex: 1;
         }
@@ -22,7 +32,7 @@ $error-color: #ed4337;
         margin-top: 30px;
 
         @include abstracts.screen(md) {
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
         &--inline {
@@ -70,13 +80,12 @@ $error-color: #ed4337;
         padding: 12px;
 
         &-input {
-            width: 100%;
-
             resize: none;
         }
     }
 
     &__text-input {
+        position: relative;
         height: 50px;
 
         &--small {
@@ -91,7 +100,10 @@ $error-color: #ed4337;
     &__input,
     &__text-area-input {
         flex: 1;
+
+        width: 100%;
         height: 100%;
+
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 1.45;
@@ -114,6 +126,136 @@ $error-color: #ed4337;
             margin-left: 12px;
             display: none;
             animation: shake 0.5s;
+        }
+    }
+
+    &__select-dialog {
+        position: absolute;
+        left: 10px;
+        bottom: 44px;
+        z-index: 1;
+
+        display: flex;
+        flex-direction: column;
+
+        min-width: 230px;
+        max-height: 310px;
+        padding-bottom: 10px;
+        border: 1px solid #d2d1d6;
+        border-radius: 10px;
+        box-shadow: 0 0 5px var(--form-select-dialog-shadow);
+
+        background: var(--form-select-dialog-bg);
+
+        opacity: 0;
+        visibility: hidden;
+        translate: 0 8px;
+
+        transition: opacity, visibility, translate;
+        transition-duration: 0.2s;
+
+        &.show {
+            opacity: 1;
+            visibility: visible;
+            translate: 0;
+        }
+
+        @include abstracts.screen(sm) {
+            position: fixed;
+            inset: 0;
+
+            max-width: initial;
+            max-height: initial;
+            border-radius: 0;
+        }
+    }
+
+    &__dialog-heading {
+        padding: 20px;
+
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &__close-dialog {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 12px 18px;
+        opacity: 0.8;
+
+        font-size: 3rem;
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+
+        height: 38px;
+        padding: 0 20px;
+
+        border-bottom: 1px solid #d2d1d6;
+
+        &-input {
+            flex: 1;
+            height: 100%;
+            font-size: 1.6rem;
+        }
+
+        &-icon {
+            width: 16px;
+            margin-left: 10px;
+        }
+
+        @include abstracts.screen(lg) {
+            height: 48px;
+
+            &-icon {
+                width: 20px;
+            }
+        }
+
+        @include abstracts.screen(sm) {
+            margin: 10px 30px 0;
+            padding: 0 14px;
+            border: 1px solid #d2d1d6;
+            border-radius: 10px;
+        }
+    }
+
+    &__options-list {
+        flex: 1;
+
+        margin-top: 10px;
+
+        overflow-y: auto;
+        overscroll-behavior: contain;
+
+        @supports (-webkit-touch-callout: none) {
+            padding: 300px;
+        }
+    }
+
+    &__option {
+        padding: 8px 20px;
+        font-size: 1.4rem;
+
+        &--current {
+            font-weight: 500;
+            background: rgba($color: #ffb700, $alpha: 0.6);
+        }
+
+        &:not(&--current):hover {
+            background: var(--form-option-bg);
+            cursor: pointer;
+        }
+
+        @include abstracts.screen(lg) {
+            padding: 18px 30px;
+
+            font-size: 1.6rem;
         }
     }
 
