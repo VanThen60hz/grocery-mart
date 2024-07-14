@@ -37,6 +37,31 @@
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 1.42;
+
+        &--lv2 {
+            font-size: 2.2rem;
+            font-weight: 500;
+        }
+    }
+
+    &__desc {
+        margin-top: 6px;
+
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.47;
+    }
+
+    &__form {
+        margin-bottom: 30px;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 30px;
     }
 
     &__sub-heading {
@@ -115,6 +140,39 @@
 
     &__next-btn {
         margin-top: 30px;
+    }
+
+    &__edit-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 1.45;
+    }
+
+    &__checkbox {
+        &-input {
+            appearance: none;
+
+            &::before {
+                content: url(../../assets/icons/checkbox-uncheck.svg);
+            }
+
+            &:not(:checked)::before {
+                filter: var(--icon-color);
+            }
+
+            &:checked::before {
+                content: url(../../assets/icons/checkbox-checked.svg);
+            }
+        }
+    }
+
+    &__form-row {
+        flex-direction: row;
+        gap: 20px;
     }
 }
 
@@ -407,33 +465,90 @@
 
     &__ctrl {
         margin-top: auto;
+    }
+}
 
-        &-btn {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+.payment-item {
+    display: flex;
+    align-items: center;
 
-            font-size: 1.8rem;
-            font-weight: 400;
-            line-height: 1.45;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--payment-item-bg);
+
+    @include abstracts.screen(sm) {
+        align-items: flex-start;
+    }
+
+    &--pointer {
+        cursor: pointer;
+    }
+
+    &__content {
+        flex: 1;
+
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            align-items: flex-start;
         }
     }
 
+    &__info {
+        flex: 1;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.45;
+    }
+
+    &__desc,
+    &__detail {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.47;
+    }
+
+    &__desc {
+        margin-top: 4px;
+    }
+
+    &__detail {
+        margin-right: -8px;
+        padding: 8px;
+
+        color: #0071dc;
+    }
+
+    &__thumb {
+        width: 70px;
+        margin-right: 20px;
+
+        object-fit: contain;
+    }
+
     &__checkbox {
-        &-input {
-            appearance: none;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 14px;
+    }
 
-            &::before {
-                content: url(../../assets/icons/checkbox-uncheck.svg);
-            }
+    &__cost {
+        color: #9e9da8;
 
-            &:not(:checked)::before {
-                filter: var(--icon-color);
-            }
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.45;
+    }
 
-            &:checked::before {
-                content: url(../../assets/icons/checkbox-checked.svg);
-            }
-        }
+    &__checkbox-input:checked ~ &__cost {
+        color: inherit;
     }
 }

@@ -1440,6 +1440,7 @@ html {
   --gift-item-shadow: rgba(237, 237, 246, 0.2);
   --modal-bg: #fff;
   --modal-shadow: rgba(44, 43, 43, 0.2);
+  --payment-item-bg: #f6f6f6;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1544,6 +1545,7 @@ html.dark {
   --gift-item-shadow: none;
   --modal-bg: #575c6a;
   --modal-shadow: rgba(23, 28, 40, 0.4);
+  --payment-item-bg: #292e39;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -2301,7 +2303,7 @@ html.dark {
   opacity: 0;
   visibility: hidden;
   transition: opacity, visibility, max-height;
-  transition-duration: 1.5s;
+  transition-duration: 0.9s;
 }
 @media (max-width: 991.98px) {
   .sub-menu {
@@ -2857,7 +2859,7 @@ html.dark {
   align-items: center;
   padding: 0 12px;
   border-radius: 10px;
-  border: 1.5px solid #d2d1d6;
+  border: 1px solid #d2d1d6;
 }
 .form__text-area--small, .form__text-input--small {
   border-radius: 8px;
@@ -3053,7 +3055,7 @@ html.dark {
   width: 19px;
   height: 19px;
   border-radius: 5px;
-  border: 1.5px solid #9e9da8;
+  border: 1px solid #9e9da8;
 }
 .form__checkbox:has(:checked)::before {
   border-color: #ffb700;
@@ -3073,6 +3075,10 @@ html.dark {
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 1.46;
+}
+.form__label--medium {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
 }
 .form__label--small {
   margin-bottom: 10px;
@@ -3969,6 +3975,25 @@ html.dark {
   font-weight: 700;
   line-height: 1.42;
 }
+.cart-info__heading--lv2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+.cart-info__desc {
+  margin-top: 6px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.47;
+}
+.cart-info__form {
+  margin-bottom: 30px;
+}
+.cart-info__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
 .cart-info__sub-heading {
   margin: 30px 0;
   font-size: 1.8rem;
@@ -4029,6 +4054,30 @@ html.dark {
 }
 .cart-info__next-btn {
   margin-top: 30px;
+}
+.cart-info__edit-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+.cart-info__checkbox-input {
+  appearance: none;
+}
+.cart-info__checkbox-input::before {
+  content: url(../../assets/icons/checkbox-uncheck.svg);
+}
+.cart-info__checkbox-input:not(:checked)::before {
+  filter: var(--icon-color);
+}
+.cart-info__checkbox-input:checked::before {
+  content: url(../../assets/icons/checkbox-checked.svg);
+}
+.cart-info__form-row {
+  flex-direction: row;
+  gap: 20px;
 }
 
 .cart-info + .cart-info {
@@ -4277,25 +4326,75 @@ html.dark {
 .address-card__ctrl {
   margin-top: auto;
 }
-.address-card__ctrl-btn {
+
+.payment-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  background: var(--payment-item-bg);
+}
+@media (max-width: 575.98px) {
+  .payment-item {
+    align-items: flex-start;
+  }
+}
+.payment-item--pointer {
+  cursor: pointer;
+}
+.payment-item__content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+@media (max-width: 575.98px) {
+  .payment-item__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.payment-item__info {
+  flex: 1;
+}
+.payment-item__title {
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.45;
 }
-.address-card__checkbox-input {
-  appearance: none;
+.payment-item__desc, .payment-item__detail {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.47;
 }
-.address-card__checkbox-input::before {
-  content: url(../../assets/icons/checkbox-uncheck.svg);
+.payment-item__desc {
+  margin-top: 4px;
 }
-.address-card__checkbox-input:not(:checked)::before {
-  filter: var(--icon-color);
+.payment-item__detail {
+  margin-right: -8px;
+  padding: 8px;
+  color: #0071dc;
 }
-.address-card__checkbox-input:checked::before {
-  content: url(../../assets/icons/checkbox-checked.svg);
+.payment-item__thumb {
+  width: 70px;
+  margin-right: 20px;
+  object-fit: contain;
+}
+.payment-item__checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 14px;
+}
+.payment-item__cost {
+  color: #9e9da8;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+.payment-item__checkbox-input:checked ~ .payment-item__cost {
+  color: inherit;
 }
 
 /*# sourceMappingURL=main.css.map */

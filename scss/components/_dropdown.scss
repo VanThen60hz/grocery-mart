@@ -194,7 +194,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity, visibility, max-height;
-    transition-duration: 1.5s;
+    transition-duration: 0.9s;
 
     @include abstracts.screen(lg) {
         position: initial;
