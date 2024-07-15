@@ -98,9 +98,17 @@
 
         margin-top: 10px;
 
-        &-bold {
+        &--bold {
             font-size: 2.2rem;
             font-weight: 700;
+        }
+
+        @include abstracts.screen(md) {
+            &--md-block {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
         }
     }
 
@@ -174,6 +182,16 @@
         flex-direction: row;
         gap: 20px;
     }
+
+    &__check-all {
+        margin: 30px 0;
+    }
+
+    &__checkout-all {
+        @include abstracts.screen(md) {
+            width: 100%;
+        }
+    }
 }
 
 .cart-info + .cart-info {
@@ -182,14 +200,12 @@
 
 .cart-item {
     display: flex;
-    gap: 30px;
 
     padding: 30px 0;
     border-bottom: 1px solid var(--cart-item-border);
 
     @include abstracts.screen(md) {
         padding: 16px 0;
-        gap: 16px;
 
         &:last-child {
             border-bottom: none;
@@ -200,6 +216,7 @@
     &__thumb {
         width: 175px;
         height: 172px;
+        margin: 0 30px 0 20px;
 
         object-fit: contain;
 
@@ -216,6 +233,7 @@
         @include abstracts.screen(md) {
             width: 60px;
             height: 60px;
+            margin: 0 16px;
         }
     }
 
@@ -264,6 +282,17 @@
         color: var(--cart-item-status);
     }
 
+    &__ctrl-wrap {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
     &__ctrl {
         display: flex;
         align-items: center;
@@ -271,6 +300,10 @@
 
         margin-top: auto;
         min-height: 44px;
+
+        @include abstracts.screen(md) {
+            gap: 10px;
+        }
 
         &--md-block {
             @include abstracts.screen(md) {
@@ -327,6 +360,14 @@
 
         &:first-child {
             margin-right: 10px;
+        }
+    }
+
+    &__checkout-btn {
+        margin-top: auto;
+
+        @include abstracts.screen(md) {
+            max-width: 200px;
         }
     }
 }
