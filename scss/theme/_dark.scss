@@ -4,6 +4,7 @@ html.dark {
     --text-color: #fff;
     --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(278deg) brightness(101%)
         contrast(104%);
+    --separate-bg: #292e39;
     --body-bg: #292e39;
     --header-bg-color: #171c28;
     --footer-bg-color: var(--header-bg-color);
@@ -121,4 +122,11 @@ html.dark {
 
     // Payment item
     --payment-item-bg: #292e39;
+
+    //  Profile
+    --profile-sidebar-shadow: rgba(23, 28, 40, 0.2);
+    --profile-sidebar-bg: #171c28;
+    --account-info-bg: #292e39;
+    --account-info-icon-bg: #171c28;
+    --profile-menu-link-hover: #292e39;
 }

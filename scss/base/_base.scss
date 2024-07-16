@@ -109,3 +109,10 @@ b,
 strong {
     font-weight: 600;
 }
+
+.separate {
+    height: 1px;
+    margin: var(--margin) 0;
+
+    background: var(--separate-bg);
+}

@@ -5,6 +5,7 @@ html {
     --icon-color: brightness(0) saturate(100%) invert(8%) sepia(6%) saturate(6364%) hue-rotate(212deg) brightness(95%)
         contrast(96%);
     --body-bg: #f6f6f6;
+    --separate-bg: #d2d1d6;
     --header-bg-color: #eee;
     --footer-bg-color: var(--header-bg-color);
     --top-act-group-bg-color: #fff;
@@ -133,4 +134,11 @@ html {
 
     // Payment item
     --payment-item-bg: #f6f6f6;
+
+    //  Profile
+    --profile-sidebar-bg: #fff;
+    --profile-sidebar-shadow: rgba(237, 237, 246, 0.2);
+    --account-info-bg: #f6f6f6;
+    --account-info-icon-bg: #fff;
+    --profile-menu-link-hover: #ebebeb;
 }
