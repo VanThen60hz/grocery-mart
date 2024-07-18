@@ -211,3 +211,32 @@ window.addEventListener("template-loaded", () => {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const switchBtn = document.querySelector("#switch-theme-btn");
+    const themeSwitch = document.querySelector("#theme-switch");
+
+    const isDark = localStorage.getItem("dark") === "true";
+    document.documentElement.classList.toggle("dark", isDark);
+
+    if (switchBtn) {
+        switchBtn.querySelector("span").textContent = isDark ? "Light mode" : "Dark mode";
+        switchBtn.onclick = function () {
+            const isDark = localStorage.dark === "true";
+            document.documentElement.classList.toggle("dark", !isDark);
+            localStorage.setItem("dark", !isDark);
+            switchBtn.querySelector("span").textContent = isDark ? "Dark mode" : "Light mode";
+        };
+    }
+
+    if (themeSwitch) {
+        themeSwitch.checked = isDark;
+
+        // Listen for switch changes
+        themeSwitch.addEventListener("change", () => {
+            const isDark = themeSwitch.checked;
+            document.documentElement.classList.toggle("dark", isDark);
+            localStorage.setItem("dark", isDark);
+        });
+    }
+});
