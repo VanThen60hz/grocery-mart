@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+  <url>
+    <loc>https://vanthen.click/</loc>
+    <lastmod>2024-07-22T08:50:01+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://vanthen.click/sign-in.html/</loc>
+    <lastmod>2024-07-22T08:50:01+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://vanthen.click/sign-up.html/</loc>
+    <lastmod>2024-07-22T08:50:01+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://vanthen.click/reset-password.html/</loc>
+    <lastmod>2024-07-22T08:50:01+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://vanthen.click/reset-password-emailed.html/</loc>
+    <lastmod>2024-07-22T08:50:01+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://vanthen.click/new-password.html/</loc>
+    <lastmod>2024-07-22T08:50:01+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://vanthen.click/index-logged.html/</loc>
+    <lastmod>2024-07-22T08:50:01+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://vanthen.click/profile.html</loc>
+    <lastmod>2024-07-22T08:50:01+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vanthen.click/product-detail.html</loc>
+    <lastmod>2024-07-22T08:50:01+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vanthen.click/payment.html</loc>
+    <lastmod>2024-07-22T08:50:01+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vanthen.click/favorite.html</loc>
+    <lastmod>2024-07-22T08:50:01+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vanthen.click/edit-personal-info.html</loc>
+    <lastmod>2024-07-22T08:50:01+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vanthen.click/checkout.html</loc>
+    <lastmod>2024-07-22T08:50:01+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vanthen.click/add-new-card.html</loc>
+    <lastmod>2024-07-22T08:50:01+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+
+</urlset>

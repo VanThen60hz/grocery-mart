@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /sign-in.html
+Disallow: /sign-up.html
+
+Sitemap: https://vanthen.click/
